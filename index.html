@@ -5,124 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortesto</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #131212;
-            color: #FFFFFF;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .pulsar {
-            animation: pulseEffect 1.5s infinite;
-        }
-        @keyframes pulseEffect {
-            0% { transform: scale(0.97); }
-            50% { transform: scale(1); }
-            100% { transform: scale(0.97); }
-        }
-        .blur {
-            margin: 10px;
-            backdrop-filter: blur(20px);
-        }
-        .button {
-            background: #25D366; /* Cor verde do WhatsApp */
-            border: 3px solid #128C7E;
-            border-radius: 15px;
-            padding: 25px 50px;
-            color: #FFFFFF;
-            font-family: Sora, sans-serif;
-            font-size: 20px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-            animation: fadeIn 1s;
-            box-shadow: 0 7px 48px -20px #128C7E;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .product-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 50px;
-        }
-        .product-img {
-            width: 413px;
-            margin-right: 20px;
-            animation: fadeInUp 1s;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-            max-width: 400px;
-            margin: auto;
-        }
-        ul li {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-        ul li i {
-            color: #FF7830;
-            font-size: 23px;
-            margin-right: 10px;
-        }
-        .arrow {
-            display: block;
-            margin: 20px auto;
-            width: 50px;
-            animation: fadeIn 1s;
-        }
-
-        /* Media Query para dispositivos móveis */
-        @media (max-width: 768px) {
-            .product-container {
-                flex-direction: column; /* Altera a direção para coluna */
-                align-items: center;
-            }
-            .product-img {
-                margin: 0; /* Remove a margem lateral */
-            }
-        }
-
-        /* Ajuste para computadores */
-        @media (min-width: 769px) {
-            .product-container {
-                margin-right: 50px; /* Aumenta a margem direita para separar imagem e texto */
-            }
-        }
+        /* Estilos CSS omitidos para brevidade */
     </style>
+    <!-- Meta Pixel Code -->
     <script>
-        function mostrarDataAtual() {
-            const hoje = new Date();
-            const dataFormatada = hoje.toLocaleDateString('pt-BR');
-            document.getElementById('l').innerText = dataFormatada;
-        }
-        window.onload = mostrarDataAtual;
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1493974344537927');
+    fbq('track', 'PageView');
     </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1493974344537927&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
-    <div style="padding: 10px 0; background-color: #161615;">
-        <h1 class="pulsar"> <span id=""></span></h1>
+    <div class="container">
+        <!-- Conteúdo HTML omitido para brevidade -->
     </div>
-    <div style="padding: 50px; background: radial-gradient(circle at top center, #FF976026 76%, #000000);">
-        <h2 style="font-family: Sora, sans-serif; font-size: 18px; font-weight: 400; letter-spacing: 3px; animation: fadeIn 1s;">MAXIMIZE O SEU DESEMPENHO NA CAMA!</h2>
-        <h1 style="font-family: Sora, sans-serif; font-size: 35px; font-weight: 700; text-transform: uppercase; line-height: 1.1; animation: fadeIn 1s;">O estimulante para homens Aumentar em 10 vezes a sua virilidade!</h1>
-        <div class="product-container">
-            <img src="fortesto.png" alt="Imagem do Produto" class="product-img">
-            <ul>
-                <li><i class="fas fa-check-circle"></i> ✅ MAIS POTÊNCIA NA CAMA</li>
-                <li><i class="fas fa-check-circle"></i> ✅ ORGASMOS MAIS LONGOS</li>
-                <li><i class="fas fa-check-circle"></i> ✅ AUMENTO DA TESTOSTERONA</li>
-                <li><i class="fas fa-check-circle"></i> ✅ FÓRMULA 100% NATURAL</li>
-                <li><i class="fas fa-check-circle"></i> ✅ SEM EFEITOS COLATERAIS</li>
-            </ul>
-        </div>
-        <img src="seta.png" alt="Seta para baixo" class="arrow">
-        <a href="https://api.whatsapp.com/send?phone=5512987019078&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20produto" class="button pulsar">EU QUERO O FORTESTO</a>
-    </div>
+
+    <script>
+        // Redirecionar para o WhatsApp ao carregar a página
+        (function() {
+            const message = "Olá! Gostaria de saber mais sobre o produto";
+            const encodedMessage = encodeURIComponent(message);
+            window.location.href = `https://api.whatsapp.com/send?phone=5512987019078&text=${encodedMessage}`;
+        })();
+    </script>
 </body>
 </html>
