@@ -33,7 +33,7 @@
     <script>
         // Redirecionar para o WhatsApp ao carregar a página
         (function() {
-            const message = "Olá! Gostaria de saber mais sobre o produto";
+            const message = "Olá! Gostaria de saber mais sobre o produto e também receber os valores.";
             const encodedMessage = encodeURIComponent(message);
             window.location.href = `https://api.whatsapp.com/send?phone=5512987019078&text=${encodedMessage}`;
         })();
