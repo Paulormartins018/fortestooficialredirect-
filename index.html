@@ -64,17 +64,10 @@
         fbq('init', '1493974344537927');
         fbq('track', 'PageView');
 
-        // Redirecionar para o WhatsApp ao carregar a página
-        (function() {
-            const message = "Olá! Gostaria de saber mais sobre o produto e também receber os valores.";
-            const encodedMessage = encodeURIComponent(message);
-            window.location.href = `https://api.whatsapp.com/send?phone=5512987019078&text=${encodedMessage}`;
-            
-            // Finalizar o pixel do Facebook após redirecionamento
-            setTimeout(function() {
-                fbq('track', 'Lead');
-            }, 500);
-        })();
+        // Finalizar o pixel do Facebook após redirecionamento
+        function trackLead() {
+            fbq('track', 'Lead');
+        }
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1493974344537927&ev=PageView&noscript=1"
@@ -89,9 +82,18 @@
         <!-- Seu conteúdo HTML aqui -->
 
         <div class="cta">
-            <button onclick="sendMessage()">Eu Quero Fortesto</button>
+            <button onclick="redirect()">Eu Quero Fortesto</button>
         </div>
     </div>
+
+    <script>
+        function redirect() {
+            window.location.href = 'https://ev.braip.com/ref?pv=proj5jg3&af=afime1206v';
+            // Finalizar o pixel do Facebook após redirecionamento
+            setTimeout(trackLead, 500);
+        }
+    </script>
 </body>
 </html>
+
 
